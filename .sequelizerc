@@ -1,0 +1,8 @@
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('./api-livraria-router/config', 'config.json'),
+  'models-path': path.resolve('./api-livraria-router/models'),
+  'seeders-path': path.resolve('./api-livraria-router/seeders'),
+  'migrations-path': path.resolve('./api-livraria-router/migrations')
+}
