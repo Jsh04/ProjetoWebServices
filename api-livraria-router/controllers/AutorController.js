@@ -34,7 +34,7 @@ class AutorController{
 
     static async atualizarAutor(req, res){
         const { id } = req.params;
-        const { dadosAtualizar } = req.body;
+        const  dadosAtualizar  = req.body;
         try {
             await database.Autor.update(dadosAtualizar,{
                 where: {

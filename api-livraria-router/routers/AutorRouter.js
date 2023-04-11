@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/autor', autorController.listarAutores);
 router.post('/autor', autorController.criarAutor);
-router.put('/autor', autorController.atualizarAutor);
-router.delete('/autor', autorController.deletarAutor);
+router.put('/autor/:id', autorController.atualizarAutor);
+router.delete('/autor/:id', autorController.deletarAutor);
 
 module.exports = router;

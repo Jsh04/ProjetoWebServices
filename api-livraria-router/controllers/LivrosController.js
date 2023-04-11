@@ -20,6 +20,42 @@ class LivrosController{
             return res.status(500).json(erro.message)
         }
     }
+
+    static async atualizarLivro(req, res){
+        const { id } = req.params;
+        const  dadosAtualizar = req.body;
+        try {
+            await database.Livros.update(dadosAtualizar,{
+                where: {
+                    id: Number(id)
+                }
+            })
+            //console.log(dadosAtualizar)
+            const dadosAtualizados = await database.Livros.findOne({
+                where: {
+                    id: Number(id)
+                }
+            })
+            console.log(dadosAtualizados);
+
+            return res.status(200).json(dadosAtualizados);
+        } catch (erro) {
+            return res.status(500).json(erro.message)
+        }
+    }
+
+
+    static async deletarLivro(req, res){
+        const { id } = req.params;
+        try {
+            await database.Livros.destroy({where: {
+                id:Number(id)
+            }})
+        res.status(204).send({message: `Autor do id: ${id} deletado com sucesso`})
+        } catch (erro) {
+            return res.status(500).json(erro.message)
+        }
+    }
 }
 
 module.exports = LivrosController;
