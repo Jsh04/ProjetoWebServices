@@ -11,7 +11,7 @@ module.exports = {
       },
       autor_id:{
         type: Sequelize.INTEGER,
-        references: { model: 'autors', key: 'id' }
+        references: { model: 'Autors', key: 'id' }
       },
       nome_livro: {
         type: Sequelize.STRING
