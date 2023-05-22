@@ -9,7 +9,7 @@ app.get('/',(req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Servidor ativo na porta ${port}`)
+    console.log(`Servidor ativo na porta da de numero: ${port}`)
 })
 
  
