@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./api-livraria-router/index.js && npx sequelize-cli db:migrate",
+    "start": "node ./api-livraria-router/index.js & npx sequelize-cli db:migrate",
     "migrate": "npx sequelize-cli db:migrate"
   },
   "author": "",
